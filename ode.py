@@ -3,21 +3,21 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
 from scipy.integrate import odeint
 
-# 1. Define the ODE System
+
 def t6ss_model(y, t, r, s, alpha_AB, alpha_BA):
     A, B = y
     dA_dt = A * (r - s * (A + B) - alpha_AB * B)
     dB_dt = B * (r - s * (A + B) - alpha_BA * A)
     return [dA_dt, dB_dt]
 
-# Set fixed parameters and time domain
+
 r = 2.0
 s = 2.0
 t = np.linspace(0, 20, 500)
 
-# 2. Setup the Figure and Plotting Area
+
 fig, ax = plt.subplots(figsize=(10, 6))
-plt.subplots_adjust(left=0.1, bottom=0.35) # Make room for sliders
+plt.subplots_adjust(left=0.1, bottom=0.35) 
 
 # Initial parameter values
 init_A = 0.51
