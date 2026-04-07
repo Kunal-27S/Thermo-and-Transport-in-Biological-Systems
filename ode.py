@@ -33,7 +33,7 @@ sol = odeint(t6ss_model, y0, t, args=(r, s, init_alpha_AB, init_alpha_BA))
 line_A, = ax.plot(t, sol[:, 0], 'b-', lw=2, label='Strain A (Cooperator)')
 line_B, = ax.plot(t, sol[:, 1], 'r-', lw=2, label='Strain B (Cheater)')
 
-ax.set_title('Interactive T6SS Well-Mixed ODE Simulation', fontsize=14)
+ax.set_title('Interactive T6SS ODE Simulation', fontsize=14)
 ax.set_xlabel('Time')
 ax.set_ylabel('Population Density')
 ax.set_ylim(0, 1.1)
