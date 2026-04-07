@@ -19,7 +19,7 @@ t = np.linspace(0, 20, 500)
 fig, ax = plt.subplots(figsize=(10, 6))
 plt.subplots_adjust(left=0.1, bottom=0.35) 
 
-# Initial parameter values
+# Initial parameter values-----changeable
 init_A = 0.51
 init_B = 0.49
 init_alpha_AB = 0.5
